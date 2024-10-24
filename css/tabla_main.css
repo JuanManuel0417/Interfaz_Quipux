@@ -1,0 +1,172 @@
+/* Estilos de la tabla del main */
+.contenedor_tabla {
+    margin-top: 10px;
+    top: 124px;
+    left: 275px;
+    width: 1066px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: end;
+}
+
+.resultados h2 {
+    color: #555555;
+    font: normal normal medium 18px/20px Montserrat;
+}
+
+.resultados div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 4px 4px 10px #00000029;
+    color: #2C2C2C;
+}
+
+thead {
+    background-color: #016691;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+th,
+td {
+    font-size: 13px;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    height: 30px;
+    font-weight: normal;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F9F9F9;
+    /* Esto hace que el color sea en filas alternas */
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+.acciones a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #555555;
+    padding: 3px;
+    transition: 0.5s;
+}
+
+.acciones a img:hover {
+    width: 23px;
+    height: 23px;
+}
+
+.acciones a {
+    text-decoration: none;
+}
+
+/* Estos son estilos despues de la tabla */
+.inferior {
+    display: flex;
+    gap: 25%;
+    align-items: center;
+}
+
+.inferior h3 {
+    color: #2C2C2C;
+    font-weight: normal;
+    opacity: 1;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.paginacion a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #555555;
+    padding: 10px;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 10px #00000029;
+}
+
+.paginacion .activa {
+    background-color: #049EF4;
+    color: #FFFFFF;
+    border: none;
+}
+
+.paginacion .primero,
+.paginacion .ultimo {
+    width: 60px;
+    padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .modal_contenedor {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin: 20% auto;
+    }
+
+    .modal_contenedor p {
+        font-size: 16px;
+    }
+
+    .btn_si, .btn_no {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal_contenedor {
+        width: 100%;
+        padding: 20px;
+        margin: 30% auto;
+    }
+
+    .btn_si, .btn_no {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .botones {
+        gap: 10px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,226 @@
+/* El container lo que hace es que el nav y el main esten uno al lado del otro */
+.container {
+    display: flex;
+}
+
+/* El agrupador hace que los elementos dentro del main, mantengan las mismas distancias y margenes */
+.agrupador {
+    margin: 10px, 10px, 10px, 0px;
+}
+
+main {
+    padding: 10px;
+}
+
+/* Estilos para la primer fila del main */
+.superior {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.superior h1 {
+    color: #555555;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.superior button {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    right: 30px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #009CDE;
+    color: #009DE0;
+    cursor: pointer;
+    width: 164px;
+    height: 35px;
+}
+
+/* Estilos para la segunda fila del main (Barra de filtros)*/
+.form_contenedor {
+    top: 124px;
+    left: 275px;
+    width: 1066px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px #00000029;
+}
+
+.form_contenedor form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Aca ajusto los tamoños del grupo, grado y tipo de documento */
+.grado_contenedor,
+.grupo_contenedor,
+.documento_contenedor select {
+    width: 70px;
+}
+
+/* Con esto logro que el select y el input quede uno al lado del otro */
+.documento_contenedor div {
+    display: flex;
+}
+
+/* Esto hace que los label queden encima de los input y el select */
+label {
+    color: #545454;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.documento_contenedor input {
+    width: 160px;
+}
+
+.estudiante_contenedor {
+    width: 245px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #9FA6AD;
+    border-radius: 4px;
+    color: #545454;
+    ;
+}
+
+.form_contenedor button {
+    width: 80px;
+    height: 35px;
+    background-color: #009DE0;
+    color: #FCFCFC;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.form_contenedor u {
+    color: #009CDE;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Cambiar nav y main a una disposición en columna */
+    }
+
+    .form_contenedor {
+        width: 100%; /* Ajustar el ancho para que ocupe toda la pantalla en dispositivos más pequeños */
+    }
+
+    .superior button {
+        width: 140px;
+        height: 30px;
+        right: 20px; /* Ajustar el botón flotante */
+    }
+
+    .form_contenedor form {
+        flex-direction: column; /* Alinear los filtros verticalmente */
+        gap: 10px;
+    }
+
+    .grado_contenedor,
+    .grupo_contenedor,
+    .documento_contenedor select {
+        width: 100%; /* Expandir a todo el ancho del contenedor */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Colocar nav y main en una sola columna */
+    }
+
+    .agrupador {
+        margin: 5px 0; /* Reducir márgenes en dispositivos más pequeños */
+    }
+
+    .superior {
+        flex-direction: column; /* Alinear título y botón verticalmente */
+    }
+
+    .superior h1 {
+        font-size: 14px;
+    }
+
+    .superior button {
+        width: 100%; /* Botón ocupa todo el ancho */
+        height: 30px;
+        right: 0;
+        position: relative; /* Quitar posición absoluta */
+        margin-top: 10px;
+    }
+
+    .form_contenedor {
+        width: 100%; /* Ajustar el ancho completo en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .form_contenedor form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grado_contenedor,
+    .grupo_contenedor,
+    .documento_contenedor select {
+        width: 100%; /* Ajustar el ancho de los selects */
+    }
+
+    .documento_contenedor input {
+        width: 100%; /* Ajustar el ancho de los inputs */
+    }
+
+    .form_contenedor button {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+}
+
+@media (max-width: 576px) {
+    .superior {
+        text-align: center;
+        align-items: center;
+    }
+
+    .superior button {
+        width: 100%;
+        height: 30px;
+    }
+
+    .form_contenedor {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .form_contenedor form {
+        gap: 5px;
+    }
+
+    .grado_contenedor,
+    .grupo_contenedor,
+    .documento_contenedor select,
+    .documento_contenedor input {
+        width: 100%; /* Alineación de inputs y selects al 100% */
+    }
+
+    .form_contenedor button {
+        width: 100%;
+        height: 30px; /* Reducir tamaño del botón */
+    }
+}

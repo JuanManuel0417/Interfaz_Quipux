@@ -1,0 +1,106 @@
+.modal {
+    display: none;
+    /* Oculta por defecto */
+    position: fixed;
+    /* Lo pone de manera fija */
+    z-index: 1;
+    /*Esto lo que hace es que se pone encima de los contenidos   */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* El modal es la ventana flotante que aparece al dar en eliminar */
+.modal_contenedor {
+    background-color: #FFFFFF;
+    margin: 15% auto;
+    padding: 15px;
+    width: 335px;
+    height: 175px;
+    font-size: 18px;
+    border: 1px solid #0000003B;
+    color: #2C2C2C;
+    font-weight: normal;
+}
+
+/* Boton de cerar "X" */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* e¿Estilos de botonos "Eliminar y no eliminar" */
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.btn_no {
+    width: 50px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #009CDE;
+    color: #009DE0;
+}
+
+.btn_si {
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    background-color: #009CDE;
+    color: #FCFCFC;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .modal_contenedor {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin: 20% auto;
+    }
+
+    .modal_contenedor p {
+        font-size: 16px;
+    }
+
+    .btn_si, .btn_no {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal_contenedor {
+        width: 100%;
+        padding: 20px;
+        margin: 30% auto;
+    }
+
+    .btn_si, .btn_no {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .botones {
+        gap: 10px;
+        flex-direction: column;
+    }
+}

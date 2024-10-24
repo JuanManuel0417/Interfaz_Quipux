@@ -1,0 +1,207 @@
+/* Los estilos de este archivo, seran estilos complementarios para el html "buscar_estudiante.html */
+.administracion {
+    color: #009CDE;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.estudiantes {
+    color: #555555;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Estilos del primer bloque del registro de un estudiante */
+.form_contenedor form {
+    margin-bottom: 10px;
+}
+
+.form_contenedor placeholder, .form_contenedor span{
+    color: #6A737C;
+}
+
+.form_contenedor label{
+    color: #545454;
+}
+
+.form_contenedor h2 {
+    color: #009CDE;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.genero_contenedor div {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select[name="residencia"] {
+    width: 240px;
+}
+
+input[type="radio"] {
+    width: 37px;
+}
+
+.contenedor_direccion input {
+    width: 515px;
+}
+
+.grado_contenedor select {
+    width: 115px;
+}
+
+.grupo_contenedor select {
+    width: 115px;
+    margin-left: 45px;
+}
+
+/* Pequeños estilos para los inputs de la tabla  */
+table select,
+#nota {
+    width: 130px;
+}
+
+/* Contenedor de los botones */
+.butonns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Estilos de los botones */
+.btn_cancelar {
+    border: 1px solid #009CDE;
+    color: #009DE0;
+    width: 94px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.btn_guardar {
+    background-color: #049EF4;
+    border: none;
+    width: 94px;
+    height: 35px;
+    border-radius: 10px;
+    color: #FCFCFC;
+}
+
+/* Ajustes para pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+    .form_contenedor input, .form_contenedor select {
+        width: 100%; /* Para que los inputs tomen el 100% del espacio disponible */
+    }
+
+    .contenedor_direccion input {
+        width: 100%; /* Hacer la dirección responsiva también */
+    }
+
+    .grado_contenedor select, .grupo_contenedor select {
+        width: 30%;
+    }
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1023px) {
+    .agrupador {
+        padding: 10px;
+    }
+
+    .form_contenedor input, .form_contenedor select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contenedor_direccion input {
+        width: 100%;
+    }
+
+    .grado_contenedor select,
+    .grupo_contenedor select {
+        width: 45%;
+        margin-left: 10px;
+    }
+
+    .butonns {
+        flex-direction: column;
+        gap: 5px;
+        align-items: stretch;
+    }
+
+    .btn_cancelar, .btn_guardar {
+        width: 100%;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .usuario_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agrupador {
+        padding: 15px;
+    }
+
+    .form_contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_contenedor input,
+    .form_contenedor select,
+    .form_contenedor label {
+        width: 100%;
+    }
+
+    .genero_contenedor div {
+        flex-direction: column;
+    }
+
+    /* Ajustes en la tabla */
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        margin-bottom: 15px;
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tbody td {
+        text-align: left;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn_cancelar, .btn_guardar {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .paginacion {
+        display: flex;
+        justify-content: center;
+    }
+}

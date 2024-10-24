@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/main_forms.css">
+    <link rel="stylesheet" href="css/modal_flotante.css">
+    <link rel="stylesheet" href="css/tabla_main.css">
+</head>
+
+<body>
+    <!-- Contendio del header -->
+    <header>
+        <img src="imagenes/logo-quipux.svg" alt="Logo de Quipux" title="Logo de Quipux" class="logo_quipux">
+        <div class="usuario_info">
+            <h2>Carolina Fernández Echeverry</h2>
+            <img src="imagenes/ic-user-circle.svg" alt="Icono del usuario" title="Logo del usuario"
+                class="logo_usuario">
+        </div>
+    </header>
+
+    <!-- Menu, lo encerre en un div "Container" con el fin de alinearlo con el main-->
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Estudiantes</a></li>
+                <li><a href="#">Grupos</a></li>
+                <li><a href="#">Materias</a></li>
+                <li><a href="#">Evaluaciones</a></li>
+                <li><a href="#">Informes</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contendio principal (la tabla como tal) -->
+        <main>
+            <!-- primer apartado, lo encerre en "Agrupador" con el fin de manetener limites y el fondo -->
+            <div class="agrupador">
+                <div class="superior">
+                    <h1>Administración de estudiantes</h1>
+                    <button type="button" aria-label="Agregar Nuevo registro" onclick="window.location.href='buscar_estudiante.html'">
+                        <img src="imagenes/ic-plus-circle.svg" alt="Agregar nuevo registro" title="Nuevo registro"> Nuevo registro
+                    </button>
+                    
+                </div>
+
+                <!-- Barra de busqueda -->
+                <div class="form_contenedor">
+                    <form>
+                        <div class="grado_contenedor">
+                            <label for="grado">Grado</label>
+                            <select name="grado" id="grado">
+                                <option value="" disabled selected></option>
+                                <option value="1">1°</option>
+                                <option value="2">2°</option>
+                                <option value="3">3°</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo_contenedor">
+                            <label for="grupo">Grupo</label>
+                            <select name="grupo" id="grupo">
+                                <option value="" disabled selected></option>
+                                <option value="A">Grupo A</option>
+                                <option value="B">Grupo B</option>
+                                <option value="C">Grupo C</option>
+                            </select>
+                        </div>
+
+                        <div class="documento_contenedor">
+                            <label for="documento">Identificación</label>
+                            <div>
+                                <select name="tipo_documento" id="tipo_documento">
+                                    <option value="TI">TI</option>
+                                    <option value="CE">CE</option>
+                                    <option value="CC">CC</option>
+                                </select>
+                                <input type="number" name="numero_documento" placeholder="Número de documento">
+                            </div>
+                        </div>
+
+                        <div class="estudiante_contenedor">
+                            <label for="estudiante">Estudiante</label>
+                            <select name="estudiante" id="estudiante">
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="1">Juan Pérez</option>
+                                <option value="2">María López</option>
+                                <option value="3">Carlos Martínez</option>
+                                <option value="4">Ana García</option>
+                                <option value="5">Luis Fernández</option>
+                                <option value="6">Sofía Ramírez</option>
+                                <option value="7">Diego Torres</option>
+                            </select>
+                        </div>
+
+                        <button type="button" aria-label="Buscar registro">Buscar</button>
+                        <b><u>Limpiar filtros</u></b>
+                    </form>
+                </div>
+
+                <!-- Tabla de estudiantes -->
+                <div class="contenedor_tabla">
+                    <div class="resultados">
+                        <h2>Resultados</h2>
+                        <div>
+                            <label for="reultado">Mostrar</label>
+                            <select name="resultado" id="resultado">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Identificación</th>
+                                    <th>Estudiante</th>
+                                    <th>Grado</th>
+                                    <th>Grupo</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2022101</td>
+                                    <td>TI 1088123456</td>
+                                    <td>Camila Fernández Rojas</td>
+                                    <td>10</td>
+                                    <td>A</td>
+                                    <td>En curso</td>
+                                    <td class="acciones">
+                                        <a href="buscar_estudiante.html" class="editar">
+                                            <img src="imagenes/ic-show.svg" alt="Ver detalle"
+                                                title="Ver detalle de Camila Fernández Rojas">
+                                        </a>
+                                        <a href="#" class="eliminar" onclick="openModal('a Camila Fernández Rojas')">
+                                            <img src="imagenes/ic-trash.svg" alt="Eliminar"
+                                                title="Eliminar registro de Camila Fernández Rojas">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022102</td>
+                                    <td>TI 1088123499</td>
+                                    <td>Juan Felipe Montoya Ríos</td>
+                                    <td>10</td>
+                                    <td>A</td>
+                                    <td>Aprobado</td>
+                                    <td class="acciones">
+                                        <a href="buscar_estudiante.html" class="editar">
+                                            <img src="imagenes/ic-show.svg" alt="Ver detalle"
+                                                title="Ver detalle de Juan Felipe Montoya Ríos">
+                                        </a>
+                                        <a href="#" class="eliminar" onclick="openModal(' a Juan Felipe Montoya Ríos')">
+                                            <img src="imagenes/ic-trash.svg" alt="Eliminar"
+                                                title="Eliminar registro de Juan Felipe Montoya Ríos">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022103</td>
+                                    <td>CC 1089456789</td>
+                                    <td>Luisa María Cruz Hernández</td>
+                                    <td>10</td>
+                                    <td>B</td>
+                                    <td>Reprobado</td>
+                                    <td class="acciones">
+                                        <a href="buscar_estudiante.html" class="editar">
+                                            <img src="imagenes/ic-show.svg" alt="Ver registro"
+                                                title="Ver registro de Luisa María Cruz Hernández">
+                                        </a>
+                                        <a href="#" class="eliminar"
+                                            onclick="openModal('a Luisa María Cruz Hernández')">
+                                            <img src="imagenes/ic-trash.svg" alt="Eliminar"
+                                                title="Eliminar registro de Luisa María Cruz Hernández">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022104</td>
+                                    <td>TI 1088120099</td>
+                                    <td>Ana María Bedoya López</td>
+                                    <td>10</td>
+                                    <td>B</td>
+                                    <td>En curso</td>
+                                    <td class="acciones">
+                                        <a href="buscar_estudiante.html" class="editar">
+                                            <img src="imagenes/ic-show.svg" alt="Ver registro de"
+                                                title="Ver registro de Ana María Bedoya López">
+                                        </a>
+                                        <a href="#" class="eliminar" onclick="openModal('a Ana María Bedoya López')">
+                                            <img src="imagenes/ic-trash.svg" alt="Eliminar"
+                                                title="Eliminar registro de Ana María Bedoya López">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022105</td>
+                                    <td>TI 1087013499</td>
+                                    <td>Santiago Sánchez Rivera</td>
+                                    <td>10</td>
+                                    <td>A</td>
+                                    <td>En curso</td>
+                                    <td class="acciones">
+                                        <a href="buscar_estudiante.html" class="editar">
+                                            <img src="imagenes/ic-show.svg" alt="Ve registro"
+                                                title="Ver registro de Santiago Sánchez Rivera">
+                                        </a>
+                                        <a href="#" class="eliminar" onclick="openModal('a Santiago Sánchez Rivera')">
+                                            <img src="imagenes/ic-trash.svg" alt="Eliminar"
+                                                title="Eliminar registro de Santiago Sánchez Rivera">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Este apartado es de la ventana flotante cuando se da click a "Eliminar registro" -->
+                    <div id="modal" class="modal">
+                        <div class="modal_contenedor">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <p id="modal_text"></p>
+                            <hr>
+                            <p>¿Estás seguro que deseas eliminar el registro del estudiante?</p>
+                            <div class="botones">
+                                <button onclick="confirmDelete()" class="btn_no"
+                                    aria-label="No, eliminar registro">No</button>
+                                <button onclick="closeModal()" class="btn_si" aria-label="Si, eliminar registro">Sí,
+                                    eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Esto es lo ultimo que se ve del main (Parte inferior despues de la tabla) -->
+                    <div class="inferior">
+                        <h3>Mostrando 1 al 5 de 150 registros</h3>
+
+                        <div class="paginacion">
+                            <a href="#" class="primero">Primero</a>
+                            <a href="#" class="pagina activa">1</a>
+                            <a href="#" class="pagina">3</a>
+                            <a href="#" class="pagina">4</a>
+                            <a href="#" class="pagina">5</a>
+                            <a href="#" class="ultimo">Último</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Este scrip es para hacer aparecer y desaparecer el modal -->
+    <script src="js/modal_flotante.js"></script>
+</body>
+
+</html>

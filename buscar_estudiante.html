@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Estudiantes</title>
+    <link rel="stylesheet" href="css/estilosbuscador.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/main_forms.css">
+    <link rel="stylesheet" href="css/tabla_main.css">
+</head>
+
+<body>
+    <!-- Contendio del header -->
+    <header>
+        <img src="imagenes/logo-quipux.svg" alt="Logo de Quipux" title="Logo de Quipux" class="logo_quipux">
+        <div class="usuario_info">
+            <h2>Carolina Fernández Echeverry</h2>
+            <img src="imagenes/ic-user-circle.svg" alt="Icono del usuario" title="Logo del usuario"
+                class="logo_usuario">
+        </div>
+    </header>
+
+    <!-- Menu, lo encerre en un div "Container" con el fin de alinearlo con el main-->
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Estudiantes</a></li>
+                <li><a href="#">Grupos</a></li>
+                <li><a href="#">Materias</a></li>
+                <li><a href="#">Evaluaciones</a></li>
+                <li><a href="#">Informes</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contendio principal (la tabla como tal) -->
+        <main>
+            <!-- primer apartado, lo encerre en "Agrupador" con el fin de manetener limites y el fondo -->
+            <div class="agrupador">
+                <div class="superior">
+                    <h1 id="texto_principal">
+                        <span class="administracion">Administración de estudiantes / </span>
+                        <span class="estudiantes">Estudiantes</span>
+                    </h1>
+                </div>
+
+                <!-- Barra de registro -->
+                <div class="form_contenedor">
+                    <h2>Información del estudiante</h2>
+                    <form>
+                        <div class="codigo_contenedor">
+                            <label for="codigo">Código</label>
+                            <input type="number" name="codigo">
+                        </div>
+
+                        <div class="documento_contenedor">
+                            <label for="documento">Identificación</label>
+                            <div>
+                                <select name="tipo_documento" id="tipo_documento">
+                                    <option value="TI">TI</option>
+                                    <option value="CE">CE</option>
+                                    <option value="CC">CC</option>
+                                </select>
+                                <input type="number" name="numero_documento" placeholder="Número de documento">
+                            </div>
+                        </div>
+
+                        <div class="primer_nombre">
+                            <label for="nombre1">Primer Nombre</label>
+                            <input type="text" name="nombre1" placeholder="Ingresa el primer nombre">
+                        </div>
+
+                        <div class="segundo_nombre">
+                            <label for="nombr2">Segundo nombre <span>(Opcional)</span></label>
+                            <input type="text" name="nombr2" placeholder="Ingresa el segundo nombre">
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class="primer_apellido">
+                            <label for="apellido1">Primer Nombre</label>
+                            <input type="text" name="apellido1" placeholder="Ingresa el primer apellido">
+                        </div>
+
+                        <div class="segundo_apellido">
+                            <label for="apellido2">Segundo nombre <span>(Opcional)</span></label>
+                            <input type="text" name="apellido2" placeholder="Ingresa el segundo apellido">
+                        </div>
+
+                        <div class="genero_contenedor">
+                            <label for="genero">Sexo</label>
+                            <div>
+                                <input type="radio" name="genero" value="femenino">
+                                <label for="femenino">Femenino</label>
+
+                                <input type="radio" name="genero" value="masculino">
+                                <label for="masculino">Masculino</label>
+                            </div>
+                        </div>
+
+                        <div class="contenedor_fecha">
+                            <label for="fecha">Fecha de nacimiento</label>
+                            <input type="date" name="fecha">
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class="contenedor_telefono">
+                            <label for="telefono">Telefono residencia <span>(Opcional)</span></label>
+                            <input type="number" name="telefono" placeholder="Ingrese el número">
+                        </div>
+
+                        <div class="contenedor_celular">
+                            <label for="celular">Celular</label>
+                            <input type="number" name="celular" placeholder="Ingrese el número">
+                        </div>
+
+                        <div class="contenedor_email">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" name="correo" placeholder="Ej. prueba@correo.com">
+                        </div>
+
+                        <div class="contenedor_residencia">
+                            <label for="residencia">Ciudad de residencia</label>
+                            <select name="residencia" id="residencia">
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="bogota">Bogotá</option>
+                                <option value="medellin">Medellín</option>
+                                <option value="cali">Cali</option>
+                                <option value="barranquilla">Barranquilla</option>
+                                <option value="cartagena">Cartagena</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class="contenedor_direccion">
+                            <label for="direccion">Dirección de residencia</label>
+                            <input type="text" name="direccion" placeholder="Ej. Carrera 12 #45-78 Piso 2">
+                        </div>
+
+                        <div class="grado_contenedor">
+                            <label for="grado">Grado</label>
+                            <select name="grado" id="grado">
+                                <option value="" disabled selected></option>
+                                <option value="1">1°</option>
+                                <option value="2">2°</option>
+                                <option value="3">3°</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo_contenedor">
+                            <label for="grupo">Grupo</label>
+                            <select name="grupo" id="grupo">
+                                <option value="" disabled selected></option>
+                                <option value="A">Grupo A</option>
+                                <option value="B">Grupo B</option>
+                                <option value="C">Grupo C</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tabla de estudiantes -->
+                <div class="contenedor_tabla">
+                    <div class="resultados">
+                        <h2>Cursos Realizados</h2>
+                        <div>
+                            <label for="reultado">Mostrar</label>
+                            <select name="resultado" id="resultado">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Año</th>
+                                    <th>Grado</th>
+                                    <th>Grupo</th>
+                                    <th>Estado</th>
+                                    <th>Nota promedio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2022101</td>
+                                    <td>2022</td>
+                                    <td>10</td>
+                                    <td>A</td>
+                                    <td>
+                                        <select name="estado">
+                                            <option value="en curso" selected>En curso</option>
+                                            <option value="aprobado">Aprobado</option>
+                                            <option value="reprobado">Reprobado</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" name="nota" id="nota">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022102</td>
+                                    <td>2021</td>
+                                    <td>9</td>
+                                    <td>C</td>
+                                    <td>Aprobado</td>
+                                    <th>4.0</th>
+                                </tr>
+                                <tr>
+                                    <td>2022103</td>
+                                    <td>2020</td>
+                                    <td>9</td>
+                                    <td>B</td>
+                                    <td>Reprobado</td>
+                                    <th>2.4</th>
+                                </tr>
+                                <tr>
+                                    <td>2022104</td>
+                                    <td>2019</td>
+                                    <td>8</td>
+                                    <td>B</td>
+                                    <td>Aprobado</td>
+                                    <th>3.6</th>
+                                </tr>
+                                <tr>
+                                    <td>2022105</td>
+                                    <td>2018</td>
+                                    <td>7</td>
+                                    <td>A</td>
+                                    <td>Aprobado</td>
+                                    <th>3.8</th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Esto es lo ultimo que se ve del main (Parte inferior despues de la tabla) -->
+                        <div class="inferior">
+                            <h3>Mostrando 1 al 5 de 150 registros</h3>
+
+                            <div class="paginacion">
+                                <a href="#" class="primero">Primero</a>
+                                <a href="#" class="pagina activa">1</a>
+                                <a href="#" class="pagina">3</a>
+                                <a href="#" class="pagina">4</a>
+                                <a href="#" class="pagina">5</a>
+                                <a href="#" class="ultimo">Último</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botonoes de la parte inferior derecha dle main -->
+            <div class="butonns">
+                <button type="button" class="btn_cancelar" aria-label="Boton para cancelar">Cancelar</button>
+                <button type="button" class="btn_guardar" aria-label="Boton para guardar">Guardar</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
