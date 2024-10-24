@@ -16,11 +16,12 @@
     margin-bottom: 10px;
 }
 
-.form_contenedor placeholder, .form_contenedor span{
+.form_contenedor placeholder,
+.form_contenedor span {
     color: #6A737C;
 }
 
-.form_contenedor label{
+.form_contenedor label {
     color: #545454;
 }
 
@@ -89,119 +90,4 @@ table select,
     height: 35px;
     border-radius: 10px;
     color: #FCFCFC;
-}
-
-/* Ajustes para pantallas grandes (desktop) */
-@media (min-width: 1024px) {
-    .form_contenedor input, .form_contenedor select {
-        width: 100%; /* Para que los inputs tomen el 100% del espacio disponible */
-    }
-
-    .contenedor_direccion input {
-        width: 100%; /* Hacer la dirección responsiva también */
-    }
-
-    .grado_contenedor select, .grupo_contenedor select {
-        width: 30%;
-    }
-}
-
-/* Ajustes para pantallas medianas (tablets) */
-@media (max-width: 1023px) {
-    .agrupador {
-        padding: 10px;
-    }
-
-    .form_contenedor input, .form_contenedor select {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .contenedor_direccion input {
-        width: 100%;
-    }
-
-    .grado_contenedor select,
-    .grupo_contenedor select {
-        width: 45%;
-        margin-left: 10px;
-    }
-
-    .butonns {
-        flex-direction: column;
-        gap: 5px;
-        align-items: stretch;
-    }
-
-    .btn_cancelar, .btn_guardar {
-        width: 100%;
-    }
-}
-
-/* Ajustes para pantallas pequeñas (smartphones) */
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .usuario_info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .agrupador {
-        padding: 15px;
-    }
-
-    .form_contenedor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form_contenedor input,
-    .form_contenedor select,
-    .form_contenedor label {
-        width: 100%;
-    }
-
-    .genero_contenedor div {
-        flex-direction: column;
-    }
-
-    /* Ajustes en la tabla */
-    table, th, td {
-        display: block;
-        width: 100%;
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table tbody tr {
-        margin-bottom: 15px;
-        display: block;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table tbody td {
-        text-align: left;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .btn_cancelar, .btn_guardar {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .paginacion {
-        display: flex;
-        justify-content: center;
-    }
 }
